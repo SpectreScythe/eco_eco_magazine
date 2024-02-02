@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>eco eco | Home</title>
-    <link rel="stylesheet" href="../styles/globals.css">
-    <link rel="stylesheet" href="../styles/home.css">
-</head>
-<body>
 <div class="nav">
     <ul>
         <a href="./home.php">
@@ -61,5 +52,3 @@
 <!--        </a>-->
 <!--    </ul>-->
 </div>
-</body>
-</html>
