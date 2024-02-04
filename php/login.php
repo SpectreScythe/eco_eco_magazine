@@ -11,7 +11,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         header("Location: ../pages/auth/login_page.php?error=Email is Required");
         exit();
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../pages/auth/signup_page.php?error=Invalid Email format");
+        header("Location: ../pages/auth/login_page.php?error=Invalid Email format");
         exit();
     } elseif (empty($password)) {
         header("Location: ../pages/auth/login_page.php?error=Password is Required");
@@ -21,10 +21,11 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $result = mysqli_query($connection, $query);
 
         if (mysqli_num_rows($result)) {
-            echo "User Found";
+            header("Location: ../pages/home.php");
         } else {
-            echo "User not there";
+            header("Location: ../pages/auth/login_page.php?error=Incorrect Email or Password");
         }
+        exit();
     }
 
 } else {

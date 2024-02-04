@@ -14,7 +14,7 @@
     background-color: #1a1a1a;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-evenly;
 
     > ul {
         list-style-type: none;
