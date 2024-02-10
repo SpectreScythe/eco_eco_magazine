@@ -49,7 +49,7 @@
     </div>
     <div class="login-container">
         <form class="login-form">
-            <img src="../../images/login.jpg" alt="not-found">
+            <img src="../../images/auth/login.jpg" alt="not-found">
         </form>
     </div>
 </div>

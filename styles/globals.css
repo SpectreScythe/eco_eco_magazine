@@ -76,8 +76,13 @@ a{
 }
 
 .short-para {
+    backdrop-filter: blur(5px) saturate(83%);
+    -webkit-backdrop-filter: blur(5px) saturate(83%);
+    background-color: rgba(29, 29, 29, 0.38);
     font-size: 1.75rem;
-    padding: 2rem 0;
+    margin: 1rem 0;
+    border-radius: 10px;
+    padding: 2rem;
     color: var(--primary-color-text);
 }
 
@@ -96,4 +101,22 @@ a{
     width: 20rem;
     height: 100%;
     object-fit: cover;
+}
+
+.svg-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: -5;
+}
+
+svg {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    height: 100%;
 }

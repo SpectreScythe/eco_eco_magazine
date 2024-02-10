@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="../styles/pages/entertainment.css">
 </head>
 <body>
-<div class="nav">
+
+<div class="svg-div">
+    <svg
+            viewBox="0 0 1000 620"
+            fill="none"
+            preserveAspectRatio="xMidyMax meet"
+    >
+        <path d="M5 0V26C5 42.5685 18.4315 56 35 56H792C808.569 56 822 69.4315 822 86V123C822 139.569 808.569 153 792 153H635C618.984 153 606 165.984 606 182V182C606 198.016 593.016 211 577 211H234C217.431 211 204 224.431 204 241V248C204 264.569 190.569 278 174 278H101C84.4315 278 71 291.431 71 308V317C71 333.569 84.4315 347 101 347H534.5C550.24 347 563 359.76 563 375.5V375.5C563 391.24 575.76 404 591.5 404H792C808.569 404 822 417.431 822 434V468C822 484.569 808.569 498 792 498H732.5C721.178 498 712 507.178 712 518.5V518.5C712 529.822 702.822 539 691.5 539H355.5C343.074 539 333 549.074 333 561.5V561.5C333 573.926 322.926 584 310.5 584H35C18.4314 584 5 597.431 5 614V615"
+              stroke="#CCCCCC" stroke-width="10"/>
+    </svg>
+</div>
+
+<div class="nav main">
     <ul>
         <a href="./home.php">
             <li>ECO ECO</li>
@@ -58,7 +70,7 @@
     </ul>
 </div>
 
-<div class="test-img">
+<div class="main">
     <?php
     include "../php/database/connection.php";
 
@@ -86,7 +98,7 @@
             $deadpool_main = $row['img_blobA'];
             $deadpool_movie_logo = $row['img_blobB'];
 
-            $article_short_a = substr($article_short_a,0,80);
+            $article_short_a = substr($article_short_a, 0, 80);
 
             echo '<div class="card-grid">';
             echo '<a href="' . $article_links[$i] . '" target="_blank">';
@@ -110,8 +122,7 @@
     ?>
 </div>
 
-
-<div class="footer">
+<div class="footer main">
     <ul>
         <a href="">
             <p>© 2024 ECO ECO. All rights reserved.</p>
@@ -146,6 +157,8 @@
         </a>
     </ul>
 </div>
+
+<script src="../scripts/svgAnimation.js"></script>
 
 </body>
 </html>
