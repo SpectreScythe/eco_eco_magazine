@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>eco eco | Entertainment</title>
     <link rel="stylesheet" href="../styles/globals.css">
-    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/pages/home.css">
+    <link rel="stylesheet" href="../styles/pages/entertainment.css">
 </head>
 <body>
 <div class="nav">
@@ -47,14 +48,69 @@
     </ul>
     <ul>
         <a href="./auth/login_page.php">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                 <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                 <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
                       style="fill: #cccccc"/>
             </svg>
             <li>Logout</li>
+        </a>
     </ul>
 </div>
+
+<div class="test-img">
+    <?php
+    include "../php/database/connection.php";
+
+    $getImages = 'SELECT * FROM eco_eco_article';
+
+    $result = mysqli_query($connection, $getImages);
+
+    $article_links = [
+        "./entertainment/deadpool.php",
+        "./entertainment/despicable-me.php",
+        "./entertainment/utopia.php",
+        "./entertainment/breaking-bad.php",
+    ];
+
+    $i = 0;
+
+    if (mysqli_num_rows($result)) {
+        while ($row = mysqli_fetch_assoc($result)) {
+
+            $article_title = $row['article_title'];
+            $article_short_a = $row['article_short_a'];
+            $article_short_b = $row['article_short_b'];
+            $article_brief_a = $row['article_brief_a'];
+            $article_brief_b = $row['article_brief_b'];
+            $deadpool_main = $row['img_blobA'];
+            $deadpool_movie_logo = $row['img_blobB'];
+
+            $article_short_a = substr($article_short_a,0,80);
+
+            echo '<div class="card-grid">';
+            echo '<a href="' . $article_links[$i] . '" target="_blank">';
+            echo "<div class='home-cards'>";
+            echo '<img class="card-img" src="data:image;base64,' . base64_encode($deadpool_movie_logo) . '" alt="IMAGE">';
+            echo "<div class='card-text'>";
+            echo '<h1>' . $article_title . '</h1>';
+            echo '<p>' . $article_short_a . '.......</p>';
+            echo "</div>";
+            echo "</div>";
+            echo '</a>';
+            echo '</div>';
+
+            $i++;
+        }
+    } else {
+        echo "No images found.";
+    }
+
+    mysqli_close($connection);
+    ?>
+</div>
+
+
 <div class="footer">
     <ul>
         <a href="">

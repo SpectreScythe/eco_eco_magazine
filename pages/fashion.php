@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>eco eco | Fashion</title>
     <link rel="stylesheet" href="../styles/globals.css">
-    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/pages/home.css">
 </head>
 <body>
 <div class="nav">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>eco eco | Sign Up</title>
     <link href="../../styles/globals.css" rel="stylesheet">
-    <link href="../../styles/auth.css" rel="stylesheet">
+    <link href="../../styles/pages/auth.css" rel="stylesheet">
 </head>
 <body>
 <div class="auth-container">
