@@ -37,6 +37,6 @@ if (isset($_POST['username']) && isset($_POST['phonenumber']) && isset($_POST['e
     }
 
 } else {
-    header("Location: index.php");
+    header("Location: ../pages/404_not_found.php");
     exit();
 }

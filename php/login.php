@@ -25,6 +25,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     }
 
 } else {
-    header("Location: index.php");
+    header("Location: ../pages/404_not_found.php");
 }
 exit();
