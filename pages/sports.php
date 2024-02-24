@@ -5,6 +5,50 @@
     <title>eco eco | Sports</title>
     <link rel="stylesheet" href="../styles/globals.css">
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/style.css" />
+
+    <style>
+      p {
+        font-size: 23px;
+      }
+      </style>
+
+      <?php
+        header('Content-type: text/html; charset=utf-8');
+
+        $servername = "localhost";
+        $username = "username";
+        $password = "password";
+        $conn = new mysqli($servername, $username, $password);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+          }
+        $sql = "CREATE DATABASE myDB";
+        if ($conn->query($sql) === TRUE) {
+            echo "Database created successfully";
+          } else {
+            echo "Error creating database: " . $conn->error;
+          }
+    
+        /*
+        $imageSources = array("../images/all_sp_cover_2.jpg", "../images/all_sp_cover_3.jpg", "../images/all_sp_cover_4.jpg", "../images/all_sp_cover.jpg");
+        $index = 0;
+        foreach($imageSource as $img){
+        while (true) {
+            if ($index === count($imageSources)) {
+                $index = 0;
+            }
+            $imageSource = $imageSources[$index];
+            sleep(1);
+            echo " <img id="image" src="../images/all_sp_cover.jpg" width="600" height="430">";
+            
+        }
+    }
+
+        $conn->close();
+*/
+      ?>
+
 </head>
 <body>
 <div class="nav">
@@ -62,6 +106,108 @@
     <!--        </a>-->
     <!--    </ul>-->
 </div>
+
+<main><br>
+      <div class="top">
+        <div class="top_content">
+          <h1>Welcome to the Sports section</h1>
+          <h4>All the news about the world of sport in one place.</h4>
+        </div>
+        <div class="top">
+          <img id="image" src="../images/all_sp_cover.jpg" width="600" height="430">
+        </div>
+      </div>
+
+      <a href="sub_pgs/bumrah.html">
+        <div class="box">
+      <div class="card">
+        <div class="card_content">
+          <h2>Everyone else's expectations are their problems, not mine: Jasprit Bumrah</h2>
+          <p>
+            On Wednesday, the 29-year-old, who is making a return from a recurring back injury was seen bowling without any discomfort in his action - with no drop in his pace.
+          </p>
+          <div class="status">
+            <p>July 11 2023</p>
+          </div>
+        </div>
+        <img src="../images/bumrah.jpg" alt="bumrah" width="520" height="460"/>
+      </div>
+    </div>
+    </a>
+    <hr class="new1">
+    
+    <div class="card_container">
+      <a href="sub_pgs/messi.html">
+        <div class="box">
+          <div class="v-card">
+            <div class="card_content">
+              <h2>Lionel Messi makes shortlist for UEFA award as best player last season alongside Kevin De Bruyne and Erling Haaland</h2>
+              <p>
+               Messi won the UEFA award twice in its 12-year history, both in years when Barcelona was the European champion.
+              </p>
+              <div class="status">
+                <p>September 2 2023</p>
+              </div>
+            </div>
+            <img src="../images/messi.jpg" alt="messi" />
+        </div>
+      </div>
+      </a>
+
+        <a href="sub_pgs/chess.html">
+          <div class="box">
+          <div class="v-card">
+            <div class="card_content">
+              <h2>Chess World Cup 2023 Live Updates: Praggnanandhaa wins 1st game, but Arjun Erigaisi levels in must-win game</h2>
+              <p>
+                Arjun Erigaisi vs Praggnanandhaa Live, Chess World Cup 2023: The winner of the Erigaise-Praggnanandhaa clash will play Fabiano Caruana in the semifinal.
+              </p>
+              <div class="status">
+                <p>August 17 2023</p>
+              </div>
+            </div>
+            <img src="../images/chess.jpeg" alt="chess" />
+        </div>
+      </div>
+      </a>
+
+        <a href="sub_pgs/tennis.html">
+          <div class="box">
+          <div class="v-card">
+            <div class="card_content">
+              <h2>Novak Djokovic missed playing big US events and excited to be back</h2>
+              <p>
+                The 23-times Grand Slam champion was not allowed to compete in the U.S. last year and earlier this year over his refusal to take a COVID-19 vaccine,
+                but returned after the U.S. government relaxed its rules for unvaccinated foreign travellers in May
+              </p>
+              <div class="status">
+                <p>8 Feb 2023</p>
+              </div>
+            </div>
+            <img src="../images/tennis.jpg" alt="tennis" />
+          </div>
+      </div>
+    </div>
+    </a>
+    <hr class="new1">
+
+<a href="sub_pgs/ronaldo.html">
+  <div class="box">
+      <div class="card">
+        <div class="card_content">
+          <h2>'Everybody called Cristiano Ronaldo crazy but…': Neymar</h2>
+          <p>
+            Cristiano Ronaldo is responsible for transforming the Saudi Pro League, said Neymar in his first interview after the transfer to Al Hilal.
+          </p>
+          <div class="status">
+            <p>29 april 2023</p>
+          </div>
+        </div>
+        <img src="../images/ronaldo.png" width="520" height="460" alt="Ronaldo" />
+      </div>
+    </div>
+    </a>
+    </main>
 
 </body>
 </html>
