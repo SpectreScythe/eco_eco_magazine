@@ -7,8 +7,7 @@ $database = "eco_eco_database";
 
 $connection = mysqli_connect($userhost, $username, $password, $database);
 
-if (!$connection){
-    echo "Connection Failed <br>";
-} else {
-    echo "Connection Established <br>";
+if (!$connection) {
+    header("Location: ../../pages/404_not_found.php");
+    exit();
 }

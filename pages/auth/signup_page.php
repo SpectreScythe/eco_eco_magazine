@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>eco eco | Sign Up</title>
     <link href="../../styles/globals.css" rel="stylesheet">
-    <link href="../../styles/auth.css" rel="stylesheet">
+    <link href="../../styles/pages/auth.css" rel="stylesheet">
 </head>
 <body>
 <div class="auth-container">
     <div class="login-container">
         <form class="login-form">
-            <img alt="not-found" src="../../images/signup.jpg">
+            <img alt="not-found" src="../../images/auth/signup.jpg">
         </form>
     </div>
     <div class="login-container">

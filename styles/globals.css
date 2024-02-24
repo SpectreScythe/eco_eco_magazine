@@ -1,20 +1,31 @@
 
-:root{
-    --primary-color-black: #1d1d1;
+:root {
+    --primary-color-black: #1d1d1d;
+    --primary-color-text: #cccccc;
+    --primary-text-hover: #fff;
+    --secondary-color-black: #2d2d2d;
+    --primary-hover-black: #4e4e4e;
+    --button-hover-color: #3d3d3d;
+    --error-color-red: #FF003C;
 }
 
-*{
+body {
+    background-color: var(--secondary-color-black);
+    overflow-x: hidden;
+}
+
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
-.nav {
+.nav, .footer {
     width: 100vw;
-    background-color: #1a1a1a;
+    background-color: var(--primary-color-black);
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-evenly;
 
     > ul {
         list-style-type: none;
@@ -24,15 +35,88 @@
         > a {
             text-decoration: none;
             padding: 1.5rem;
-            color: #cccccc;
+            color: var(--primary-color-text);
             display: flex;
             align-items: center;
+
+            &:hover {
+                color: var(--primary-text-hover);
+            }
 
             > svg {
                 width: 1rem;
                 height: 1rem;
                 margin-right: 0.5rem;
+
+                &:hover {
+                    color: var(--primary-text-hover);
+                }
             }
         }
     }
+}
+
+img {
+    border-radius: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.flex-article {
+    display: flex;
+    align-items: center;
+}
+
+.article-title {
+    padding: 2rem 0;
+    font-size: 3.75rem;
+    color: var(--primary-color-text);
+}
+
+.short-para {
+    backdrop-filter: blur(5px) saturate(83%);
+    -webkit-backdrop-filter: blur(5px) saturate(83%);
+    background-color: rgba(29, 29, 29, 0.38);
+    font-size: 1.75rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    padding: 2rem;
+    color: var(--primary-color-text);
+}
+
+.article-container {
+    padding: 2rem 15rem;
+}
+
+.full_img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.flex_img {
+    margin-right: 5rem;
+    width: 20rem;
+    height: 100%;
+    object-fit: cover;
+}
+
+.svg-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: -5;
+}
+
+svg {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    height: 100%;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>eco eco | Login</title>
     <link href="../../styles/globals.css" rel="stylesheet">
-    <link href="../../styles/auth.css" rel="stylesheet">
+    <link href="../../styles/pages/auth.css" rel="stylesheet">
 </head>
 <body>
 <div class="auth-container">
@@ -49,7 +49,7 @@
     </div>
     <div class="login-container">
         <form class="login-form">
-            <img src="../../images/login.jpg" alt="not-found">
+            <img src="../../images/auth/login.jpg" alt="not-found">
         </form>
     </div>
 </div>

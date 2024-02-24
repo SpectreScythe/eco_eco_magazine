@@ -32,9 +32,11 @@ if (isset($_POST['username']) && isset($_POST['phonenumber']) && isset($_POST['e
     } else {
         $query = "INSERT INTO eco_eco_users (username, phonenumber, email, password) VALUES ('$username','$phonenumber','$email','$password')";
         $result = mysqli_query($connection, $query);
+        header("Location: ../pages/home.php");
+        exit();
     }
 
 } else {
-    header("Location: index.php");
+    header("Location: ../pages/404_not_found.php");
     exit();
 }
