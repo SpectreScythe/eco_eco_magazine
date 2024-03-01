@@ -10,7 +10,7 @@
     align-items: center;
     backdrop-filter: blur(5px) saturate(83%);
     -webkit-backdrop-filter: blur(5px) saturate(83%);
-    background-color: rgba(29, 29, 29, 0.38);
+    background-color: rgba(50, 50, 50, 0.75);
     color: var(--primary-color-text);
     width: 100%;
     height: auto;
@@ -19,8 +19,8 @@
     transition: 0.25s all linear;
 
     &:hover{
-        background-color: var(--primary-hover-black);
-        color: var(--primary-color-black);
+        background-color: var(--secondary-background-color);
+        color: var(--primary-background-color);
     }
 }
 
@@ -44,9 +44,6 @@
     height: 12rem;
     object-fit: cover;
 }
-
-
-
 
 .main{
     z-index: 10;
