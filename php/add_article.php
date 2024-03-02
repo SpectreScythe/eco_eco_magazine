@@ -2,7 +2,8 @@
 
 include "./database/connection.php";
 
-if (isset($_POST['submit']) &&
+if (
+    isset($_POST['submit']) &&
     isset($_FILES['article_imgA']) &&
     isset($_FILES['article_imgB']) &&
     isset($_POST['username']) &&
@@ -207,9 +208,7 @@ if (isset($_POST['submit']) &&
     $resultB = mysqli_query($connection, $queryB);
 
     header("Location: ../pages/add/add_article_page.php?error=Article Added Successfuly");
-
 } else {
     header("Location: ../pages/add/add_article_page.php");
     exit();
 }
-?>

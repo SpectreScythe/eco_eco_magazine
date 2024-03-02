@@ -1,139 +1,138 @@
-
 :root {
+  /* General */
 
-    /* General */
+  --primary-background-color: #202020;
+  --priamry-text-color: #9f9f9f;
+  --secondary-background-color: #3f3f3f;
+  --secondary-text-color: #cccccc;
 
-    --primary-background-color: #202020;
-    --priamry-text-color: #9f9f9f;
-    --secondary-background-color: #3f3f3f;
-    --secondary-text-color: #cccccc;
+  /* Misc */
 
-    /* Misc */
+  --error-color-red: #ff003c;
+  --success-color-green: #00ff00;
 
-    --error-color-red: #FF003C;
-    --success-color-green: #00FF00;
+  /*  Nav & Footer  */
 
-    /*  Nav & Footer  */
-
-    --NF-background-color: #101010;
-    --NF-text-color: #9f9f9f;
+  --NF-background-color: #101010;
+  --NF-text-color: #9f9f9f;
 }
 
 body {
-    background-color: var(--primary-background-color);
-    overflow-x: hidden;
+  background-color: var(--primary-background-color);
+  overflow-x: hidden;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.nav, .footer {
-    font-family: sans-serif;
-    width: 100vw;
-    background-color: var(--NF-background-color);
+.nav,
+.footer {
+  font-family: sans-serif;
+  width: 100vw;
+  background-color: var(--NF-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  > ul {
+    list-style-type: none;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
 
-    > ul {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
+    > a {
+      text-decoration: none;
+      padding: 1.5rem;
+      color: var(--NF-text-color);
+      display: flex;
+      align-items: center;
 
-        > a {
-            text-decoration: none;
-            padding: 1.5rem;
-            color: var(--NF-text-color);
-            display: flex;
-            align-items: center;
+      &:hover {
+        color: var(--priamry-text-color);
+      }
 
-            &:hover {
-                color: var(--priamry-text-color);
-            }
+      > svg {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        color: var(--NF-text-color);
 
-            > svg {
-                width: 1rem;
-                height: 1rem;
-                margin-right: 0.5rem;
-                color: var(--NF-text-color);
-
-                &:hover {
-                    color: var(--priamry-text-color);
-                }
-            }
+        &:hover {
+          color: var(--priamry-text-color);
         }
+      }
     }
+  }
 }
 
 img {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .flex-article {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .article-title {
-    padding: 2rem 0;
-    font-family: Chomsky;
-    font-size: 3.75rem;
-    color: var(--priamry-text-color);
+  padding: 2rem 0;
+  font-family: Chomsky;
+  font-size: 3.75rem;
+  color: var(--priamry-text-color);
 }
 
 .short-para {
-    backdrop-filter: blur(5px) saturate(83%);
-    -webkit-backdrop-filter: blur(5px) saturate(83%);
-    background-color: rgba(50, 50, 50, 0.75);
-    font-size: 1.75rem;
-    margin: 1rem 0;
-    border-radius: 10px;
-    padding: 2rem;
-    font-family: Penna;
-    color: var(--priamry-text-color);
+  backdrop-filter: blur(5px) saturate(83%);
+  -webkit-backdrop-filter: blur(5px) saturate(83%);
+  background-color: rgba(50, 50, 50, 0.75);
+  font-size: 1.75rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  padding: 2rem;
+  font-family: Penna;
+  color: var(--priamry-text-color);
 }
 
 .article-container {
-    padding: 2rem 15rem;
+  padding: 2rem 15rem;
 }
 
 .full_img {
-    width: 100%;
-    height: 30rem;
-    object-fit: cover;
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
 }
 
 .flex_img {
-    margin-right: 5rem;
-    width: 20rem;
-    height: 100%;
-    object-fit: cover;
+  margin-right: 5rem;
+  width: 20rem;
+  height: 100%;
+  object-fit: cover;
 }
 
 .svg-div {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-    z-index: -5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  z-index: -5;
 }
 
 svg {
-    display: inline-block;
-    position: relative;
-    z-index: 5;
-    height: 100%;
+  display: inline-block;
+  position: relative;
+  z-index: 5;
+  height: 100%;
 }
 
 .author {
-    color: var(--priamry-text-color);
+  color: var(--priamry-text-color);
 }

@@ -23,7 +23,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             header("Location: ../pages/auth/login_page.php?error=Incorrect Email or Password");
         }
     }
-
 } else {
     header("Location: ../pages/404_not_found.php");
 }
