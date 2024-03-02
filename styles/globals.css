@@ -71,7 +71,7 @@ img {
     border-radius: 10px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -132,8 +132,6 @@ svg {
     height: 100%;
 }
 
-.testImg{
-    width: 10rem;
-    height: 8rem;
-    object-fit: cover;
+.author {
+    color: var(--priamry-text-color);
 }

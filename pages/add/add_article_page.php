@@ -94,20 +94,6 @@
 
         <div class="input-container">
             <label>
-                Article Type
-            </label>
-            <label for="username">
-                <select name="type">
-                    <option>Entertainment</option>
-                    <option>Sports</option>
-                    <option>Games</option>
-                    <option>Fashion</option>
-                </select>
-            </label>
-        </div>
-
-        <div class="input-container">
-            <label>
                 Article Title
             </label>
             <label for="username">

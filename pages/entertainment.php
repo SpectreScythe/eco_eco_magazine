@@ -82,26 +82,25 @@
     <?php
     include "../php/database/connection.php";
 
-    if (!$connection){
+    if (!$connection) {
         header("Location: ./404_not_found.php");
         exit();
     } else {
+        $linkQuery = 'SELECT * FROM eco_article_links';
+        $resultLink = mysqli_query($connection, $linkQuery);
+
+        $article_links = array();
+        while ($linkRow = mysqli_fetch_assoc($resultLink)) {
+            $article_links[] = $linkRow['link'];
+        }
+
         $getImages = 'SELECT * FROM eco_eco_article';
-
         $result = mysqli_query($connection, $getImages);
-
-        $article_links = [
-            "./entertainment/deadpool.php",
-            "./entertainment/despicable-me.php",
-            "./entertainment/utopia.php",
-            "./entertainment/breaking-bad.php",
-        ];
 
         $i = 0;
 
         if (mysqli_num_rows($result)) {
             while ($row = mysqli_fetch_assoc($result)) {
-
                 $article_title = $row['article_title'];
                 $article_short_a = $row['article_short_a'];
                 $article_short_b = $row['article_short_b'];
@@ -113,14 +112,14 @@
                 $article_short_a = substr($article_short_a, 0, 80);
 
                 echo '<div class="card-grid">';
-                echo '<a href="' . $article_links[$i] . '" target="_blank">';
-                echo "<div class='home-cards'>";
+                echo '<a href="' . $article_links[$i] . '?value=' . $article_title . '" target="_blank">';
+                echo "<div class='home-cards'> ";
                 echo '<img class="card-img" src="data:image;base64,' . base64_encode($deadpool_movie_logo) . '" alt="IMAGE">';
-                echo "<div class='card-text'>";
+                echo "<div class='card-text'> ";
                 echo '<h1>' . $article_title . '</h1>';
                 echo '<p>' . $article_short_a . '.......</p>';
-                echo "</div>";
-                echo "</div>";
+                echo "</div > ";
+                echo "</div > ";
                 echo '</a>';
                 echo '</div>';
 
@@ -128,6 +127,7 @@
             }
         }
     }
+
 
     mysqli_close($connection);
     ?>
