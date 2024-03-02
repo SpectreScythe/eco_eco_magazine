@@ -12,6 +12,7 @@
     display: flex;
     height: 100vh;
     overflow: hidden;
+    font-family: sans-serif;
 
     > div {
         width: 50%;

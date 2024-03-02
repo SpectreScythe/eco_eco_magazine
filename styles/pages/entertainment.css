@@ -1,8 +1,16 @@
 
+body {
+    font-family: sans-serif;
+}
+
 .card-grid {
     display: flex;
     flex-direction: column;
     padding: 2rem 10rem;
+
+    > a {
+        color: var(--priamry-text-color);
+    }
 }
 
 .home-cards {
@@ -18,9 +26,10 @@
     border-radius: 10px;
     transition: 0.25s all linear;
 
-    &:hover{
-        background-color: var(--secondary-background-color);
+    &:hover {
         color: var(--primary-background-color);
+        background-color: rgba(63, 63, 63, 0.75);
+        backdrop-filter: blur(5px) saturate(83%);
     }
 }
 
@@ -45,6 +54,6 @@
     object-fit: cover;
 }
 
-.main{
+.main {
     z-index: 10;
 }
