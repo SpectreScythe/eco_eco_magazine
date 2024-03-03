@@ -1,4 +1,4 @@
-<div class="nav">
+<div class="hidden nav">
     <ul>
         <a href="./home.php">
             <li>ECO ECO</li>

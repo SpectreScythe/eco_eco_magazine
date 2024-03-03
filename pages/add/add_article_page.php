@@ -16,7 +16,7 @@
         </svg>
     </div>
 
-    <div class="nav">
+    <div class="hidden nav">
         <ul>
             <a target="_blank" href="./../home.php">
                 <li>ECO ECO</li>
@@ -68,19 +68,19 @@
         </ul>
     </div>
 
-    <div class="add-article-container">
+    <div class="hidden add-article-container">
         <form action="../../php/add_article.php" method="post" enctype="multipart/form-data">
             <h1>Add Article</h1>
 
             <?php if (isset($_GET['username'])) { ?>
-                <p class="error"><?php echo $_GET['username'] ?></p>
+                <p class="hidden error"><?php echo $_GET['username'] ?></p>
             <?php } ?>
 
             <?php if (isset($_GET['success'])) { ?>
-                <p class="success"><?php echo $_GET['success'] ?></p>
+                <p class="hidden success"><?php echo $_GET['success'] ?></p>
             <?php } ?>
 
-            <div class="input-container">
+            <div class="hidden input-container">
                 <label>
                     Username
                 </label>
@@ -90,10 +90,10 @@
             </div>
 
             <?php if (isset($_GET['email'])) { ?>
-                <p class="error"><?php echo $_GET['email'] ?></p>
+                <p class="hidden error"><?php echo $_GET['email'] ?></p>
             <?php } ?>
 
-            <div class="input-container">
+            <div class="hidden input-container">
                 <label>
                     Email
                 </label>
@@ -103,10 +103,10 @@
             </div>
 
             <?php if (isset($_GET['title'])) { ?>
-                <p class="error"><?php echo $_GET['title'] ?></p>
+                <p class="hidden error"><?php echo $_GET['title'] ?></p>
             <?php } ?>
 
-            <div class="input-container">
+            <div class="hidden input-container">
                 <label>
                     Article Title
                 </label>
@@ -116,10 +116,10 @@
             </div>
 
             <?php if (isset($_GET['paraA'])) { ?>
-                <p class="error"><?php echo $_GET['paraA'] ?></p>
+                <p class="hidden error"><?php echo $_GET['paraA'] ?></p>
             <?php } ?>
 
-            <div class="input-container">
+            <div class="hidden input-container">
                 <label>
                     Article Paragraph A
                 </label>
@@ -129,10 +129,10 @@
             </div>
 
             <?php if (isset($_GET['paraB'])) { ?>
-                <p class="error"><?php echo $_GET['paraB'] ?></p>
+                <p class="hidden error"><?php echo $_GET['paraB'] ?></p>
             <?php } ?>
 
-            <div class="input-container">
+            <div class="hidden input-container">
                 <label>
                     Article Paragraph B
                 </label>
@@ -142,10 +142,10 @@
             </div>
 
             <?php if (isset($_GET['paraC'])) { ?>
-                <p class="error"><?php echo $_GET['paraC'] ?></p>
+                <p class="hidden error"><?php echo $_GET['paraC'] ?></p>
             <?php } ?>
 
-            <div class="input-container">
+            <div class="hidden input-container">
                 <label>
                     Article Paragraph C
                 </label>
@@ -155,10 +155,10 @@
             </div>
 
             <?php if (isset($_GET['paraD'])) { ?>
-                <p class="error"><?php echo $_GET['paraD'] ?></p>
+                <p class="hidden error"><?php echo $_GET['paraD'] ?></p>
             <?php } ?>
 
-            <div class="input-container">
+            <div class="hidden input-container">
                 <label>
                     Article Paragraph D
                 </label>
@@ -168,39 +168,39 @@
             </div>
 
             <?php if (isset($_GET['imgA'])) { ?>
-                <p class="error"><?php echo $_GET['imgA'] ?></p>
+                <p class="hidden error"><?php echo $_GET['imgA'] ?></p>
             <?php } ?>
 
             <?php if (isset($_GET['imgError'])) { ?>
-                <p class="error"><?php echo $_GET['imgError'] ?></p>
+                <p class="hidden error"><?php echo $_GET['imgError'] ?></p>
             <?php } ?>
 
-            <div class="input-container">
+            <div class="hidden input-container">
                 <label for="file-uploadA" id="img-label">
                     Article Image A
                 </label>
-                <label class="custom-file-upload" for="file-uploadA">
+                <label class="hidden custom-file-upload" for="file-uploadA">
                     Upload Image
                 </label>
-                <input class="file-input" type="file" id="file-uploadA" accept="image/*" name="article_imgA">
+                <input class="hidden file-input" type="file" id="file-uploadA" accept="image/*" name="article_imgA">
             </div>
 
             <?php if (isset($_GET['imgB'])) { ?>
-                <p class="error"><?php echo $_GET['imgB'] ?></p>
+                <p class="hidden error"><?php echo $_GET['imgB'] ?></p>
             <?php } ?>
 
             <?php if (isset($_GET['imgError'])) { ?>
-                <p class="error"><?php echo $_GET['imgError'] ?></p>
+                <p class="hidden error"><?php echo $_GET['imgError'] ?></p>
             <?php } ?>
 
-            <div class="input-container">
+            <div class="hidden input-container">
                 <label for="file-uploadB" id="img-label">
                     Article Image B
                 </label>
-                <label class="custom-file-upload" for="file-uploadB">
+                <label class="hidden custom-file-upload" for="file-uploadB">
                     Upload Image
                 </label>
-                <input class="file-input" type="file" id="file-uploadB" accept="image/*" name="article_imgB">
+                <input class="hidden file-input" type="file" id="file-uploadB" accept="image/*" name="article_imgB">
             </div>
 
 
@@ -211,7 +211,7 @@
         </form>
     </div>
 
-    <div class="footer">
+    <div class="hidden footer">
         <ul>
             <a target="_blank" href="">
                 <p>© 2024 ECO ECO. All rights reserved.</p>
@@ -238,6 +238,7 @@
     </div>
 
     <script src="../../scripts/svgAnimation.js"></script>
+    <script src="../../scripts/animateDynamically.js"></script>
 
 </body>
 

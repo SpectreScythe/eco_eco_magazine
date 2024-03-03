@@ -17,7 +17,7 @@
         </svg>
     </div>
 
-    <div class="nav main">
+    <div class="hidden nav main">
         <ul>
             <a target="_blank" href="./home.php">
                 <li>ECO ECO</li>
@@ -69,7 +69,7 @@
         </ul>
     </div>
 
-    <div class="main">
+    <div class="hidden main">
         <?php
         include "../php/database/connection.php";
 
@@ -102,10 +102,10 @@
 
                     $article_short_a = substr($article_short_a, 0, 80);
 
-                    echo '<div class="card-grid">';
+                    echo '<div class="hidden card-grid">';
                     echo '<a href="' . $article_links[$i] . '?value=' . $article_title . '" target="_blank">';
                     echo "<div class='home-cards'> ";
-                    echo '<img class="card-img" src="data:image;base64,' . base64_encode($deadpool_movie_logo) . '" alt="IMAGE">';
+                    echo '<img class="hidden card-img" src="data:image;base64,' . base64_encode($deadpool_movie_logo) . '" alt="IMAGE">';
                     echo "<div class='card-text'> ";
                     echo '<h1>' . $article_title . '</h1>';
                     echo '<p>' . $article_short_a . '.......</p>';
@@ -124,7 +124,7 @@
         ?>
     </div>
 
-    <div class="footer main">
+    <div class="hidden footer main">
         <ul>
             <a target="_blank" href="">
                 <p>© 2024 ECO ECO. All rights reserved.</p>
@@ -157,6 +157,7 @@
     </div>
 
     <script src="../scripts/svgAnimation.js"></script>
+    <script src="../scripts/animateDynamically.js"></script>
 
 </body>
 

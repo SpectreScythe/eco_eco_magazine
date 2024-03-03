@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="nav">
+    <div class="hidden nav">
         <ul>
             <a target="_blank" href="./home.php">
                 <li>ECO ECO</li>
@@ -60,7 +60,7 @@
         </ul>
     </div>
 
-    <div class="footer">
+    <div class="hidden footer">
         <ul>
             <a target="_blank" href="">
                 <p>© 2024 ECO ECO. All rights reserved.</p>

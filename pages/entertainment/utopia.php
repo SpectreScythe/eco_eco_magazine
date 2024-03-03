@@ -17,7 +17,7 @@
         </svg>
     </div>
 
-    <div class="nav">
+    <div class="hidden nav">
         <ul>
             <a href="./../home.php">
                 <li>ECO ECO</li>
@@ -70,7 +70,7 @@
     </div>
 
 
-    <div class="article-container">
+    <div class="hidden article-container">
         <?php
         include "../../php/database/connection.php";
 
@@ -89,15 +89,15 @@
                 $deadpool_main = $row['img_blobA'];
                 $deadpool_movie_logo = $row['img_blobB'];
 
-                echo '<h1 class="article-title">' . $article_title . '</h1>';
-                echo '<div class="flex-article">';
-                echo '<img class="my-img flex_img utopia" src="data:image;base64,' . base64_encode($deadpool_main) . '" alt="IMAGE">';
-                echo '<p class="short-para">' . $article_short_a . '</p>';
+                echo '<h1 class="hidden article-title">' . $article_title . '</h1>';
+                echo '<div class="hidden flex-article">';
+                echo '<img class="hidden my-img flex_img utopia" src="data:image;base64,' . base64_encode($deadpool_main) . '" alt="IMAGE">';
+                echo '<p class="hidden short-para">' . $article_short_a . '</p>';
                 echo '</div>';
-                echo '<p class="short-para">' . $article_brief_b . '</p>';
-                echo '<img class="my-img full_img" src="data:image;base64,' . base64_encode($deadpool_movie_logo) . '" alt="IMAGE">';
-                echo '<p class="short-para">' . $article_short_b . '</p>';
-                echo '<p class="short-para">' . $article_brief_a . '</p>';
+                echo '<p class="hidden short-para">' . $article_brief_b . '</p>';
+                echo '<img class="hidden my-img full_img" src="data:image;base64,' . base64_encode($deadpool_movie_logo) . '" alt="IMAGE">';
+                echo '<p class="hidden short-para">' . $article_short_b . '</p>';
+                echo '<p class="hidden short-para">' . $article_brief_a . '</p>';
             }
         } else {
             echo "No images found.";
@@ -105,10 +105,10 @@
 
         mysqli_close($connection);
         ?>
-        <img class="full_img" src="../../images/utopia/utopiaB.webp" alt="">
+        <img class="hidden full_img" src="../../images/utopia/utopiaB.webp" alt="">
     </div>
 
-    <div class="footer">
+    <div class="hidden footer">
         <ul>
             <a target="_blank" href="">
                 <p>© 2024 ECO ECO. All rights reserved.</p>
@@ -141,6 +141,7 @@
     </div>
 
     <script src="../../scripts/svgAnimation.js"></script>
+    <script src="../../scripts/animateDynamically.js"></script>
 
 </body>
 

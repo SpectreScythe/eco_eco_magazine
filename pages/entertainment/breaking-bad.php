@@ -16,7 +16,7 @@
         </svg>
     </div>
 
-    <div class="nav">
+    <div class="hidden nav">
         <ul>
             <a href="./../home.php">
                 <li>ECO ECO</li>
@@ -69,7 +69,7 @@
     </div>
 
 
-    <div class="article-container">
+    <div class="hidden article-container">
         <?php
         include "../../php/database/connection.php";
 
@@ -88,15 +88,15 @@
                 $deadpool_main = $row['img_blobA'];
                 $deadpool_movie_logo = $row['img_blobB'];
 
-                echo '<h1 class="article-title">' . $article_title . '</h1>';
-                echo '<img class="my-img" src="data:image;base64,' . base64_encode($deadpool_main) . '" alt="IMAGE">';
-                echo '<div class="flex-article">';
-                echo '<p class="short-para">' . $article_short_a . '</p>';
+                echo '<h1 class="hidden article-title">' . $article_title . '</h1>';
+                echo '<img class="hidden my-img" src="data:image;base64,' . base64_encode($deadpool_main) . '" alt="IMAGE">';
+                echo '<div class="hidden flex-article">';
+                echo '<p class="hidden short-para">' . $article_short_a . '</p>';
                 echo '</div>';
-                echo '<p class="short-para">' . $article_brief_b . '</p>';
-                echo '<img class="my-img full_img" src="data:image;base64,' . base64_encode($deadpool_movie_logo) . '" alt="IMAGE">';
-                echo '<p class="short-para">' . $article_short_b . '</p>';
-                echo '<p class="short-para">' . $article_brief_a . '</p>';
+                echo '<p class="hidden short-para">' . $article_brief_b . '</p>';
+                echo '<img class="hidden my-img full_img" src="data:image;base64,' . base64_encode($deadpool_movie_logo) . '" alt="IMAGE">';
+                echo '<p class="hidden short-para">' . $article_short_b . '</p>';
+                echo '<p class="hidden short-para">' . $article_brief_a . '</p>';
             }
         } else {
             echo "No images found.";
@@ -104,8 +104,8 @@
 
         mysqli_close($connection);
         ?>
-        <img class="full_img" src="../../images/breaking-bad/bbB.jpg" alt="">
-        <p class="short-para">As acclaimed as Breaking Bad was, it is always risky to continue a story after giving
+        <img class="hidden full_img" src="../../images/breaking-bad/bbB.jpg" alt="">
+        <p class="hidden short-para">As acclaimed as Breaking Bad was, it is always risky to continue a story after giving
             audiences a rather definitive ending. Certainly, there have been successful television spinoff and continuations
             in the past, but there are even more examples of attempts to continue on a franchise only to sully the name of
             the original in the process. Breaking Bad is a rare example of a great show that is made even better by its
@@ -114,7 +114,7 @@
     </div>
 
 
-    <div class="footer">
+    <div class="hidden footer">
         <ul>
             <a target="_blank" href="">
                 <p>© 2024 ECO ECO. All rights reserved.</p>
@@ -146,6 +146,8 @@
         </ul>
     </div>
     <script src="../../scripts/svgAnimation.js"></script>
+    <script src="../../scripts/animateDynamically.js"></script>
+
 </body>
 
 </html>

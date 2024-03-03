@@ -136,3 +136,16 @@ svg {
 .author {
     color: var(--priamry-text-color);
 }
+
+.hidden {
+    z-index: 2;
+    opacity: 0;
+    scale: 0.9;
+    transition: 1s all ease;
+}
+
+.show {
+    z-index: 1000000;
+    scale: 1;
+    opacity: 1;
+}

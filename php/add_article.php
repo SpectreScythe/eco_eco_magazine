@@ -29,26 +29,36 @@ if (
     $article_imgB = $_FILES['article_imgB'];
 
     if (empty($username)) {
-        header("Location: ../pages/add/add_article_page.php?username=❗     Username can't be empty");
+        header("Location: ../pages/add/add_article_page.php?username=❗ USERNAME CAN'T BE EMPTY");
+        exit();
     } elseif (empty($email)) {
-        header("Location: ../pages/add/add_article_page.php?email=❗     Email can't be empty");
+        header("Location: ../pages/add/add_article_page.php?email=❗ EMAIL CAN'T BE EMPTY");
+        exit();
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../pages/add/add_article_page.php?email=❗     Invalid Email address");
+        header("Location: ../pages/add/add_article_page.php?email=❗ INVALID EMAIL ADDRESS");
+        exit();
     } elseif (empty($article_title)) {
-        header("Location: ../pages/add/add_article_page.php?title=❗     Title can't be empty");
+        header("Location: ../pages/add/add_article_page.php?title=❗ TITLE CAN'T BE EMPTY");
+        exit();
     } elseif (empty($article_paraA)) {
-        header("Location: ../pages/add/add_article_page.php?paraA=❗     Paragraph A can't be empty");
+        header("Location: ../pages/add/add_article_page.php?paraA=❗ PARAGRAPH A CAN'T BE EMPTY");
+        exit();
     } elseif (empty($article_paraB)) {
-        header("Location: ../pages/add/add_article_page.php?paraB=❗     Paragraph B can't be empty");
+        header("Location: ../pages/add/add_article_page.php?paraB=❗ PARAGRAPH B CAN'T BE EMPTY");
+        exit();
     } elseif (empty($article_paraC)) {
-        header("Location: ../pages/add/add_article_page.php?paraC=❗     Paragraph C can't be empty");
+        header("Location: ../pages/add/add_article_page.php?paraC=❗ PARAGRAPH C CAN'T BE EMPTY");
+        exit();
     } elseif (empty($article_paraD)) {
-        header("Location: ../pages/add/add_article_page.php?paraD=❗     Paragraph D can't be empty");
+        header("Location: ../pages/add/add_article_page.php?paraD=❗ PARAGRAPH D CAN'T BE EMPTY");
+        exit();
     }
-    // elseif (count($article_imgA) ==) {
-    // header("Location: ../pages/add/add_article_page.php?imgA=❗     Paragraph D can't be empty");
-    // } elseif (count($article_imgB)) {
-    // header("Location: ../pages/add/add_article_page.php?imgB=❗     Paragraph D can't be empty");
+    // elseif ($article_imgA['error'] = 4) {
+    //     header("Location: ../pages/add/add_article_page.php?imgA=❗ PLEASE SELECT AN IMAGE FOR THE ARTICLE");
+    //     exit();
+    // } elseif ($article_imgB['error'] = 4) {
+    //     header("Location: ../pages/add/add_article_page.php?imgB=❗ PLEASE SELECT AN IMAGE FOR THE ARTICLE");
+    //     exit();
     // } 
     else {
 
@@ -130,7 +140,7 @@ if (
     </ul>
 </div>
 
-<div class='article-container'>";
+<div class='hidden article-container'>";
 
         $url = "";
         $htmlContent .= "<?php
@@ -152,15 +162,13 @@ if (
                 \$deadpool_main = \$row['img_blobA'];
                 \$deadpool_movie_logo = \$row['img_blobB'];
 
-                echo '<h1 class=\"article-title\">' . \$article_title . '</h1>';
-                echo '<p class=\"short-para\">' . \$article_short_a . '</p>';
-                echo '<img class=\"my-img full_img\" src=\"data:image;base64,' . base64_encode(\$deadpool_movie_logo) . '\" alt=\"IMAGE\">';
-                echo '<p class=\"short-para\">' . \$article_short_b . '</p>';
-                echo '<p class=\"short-para\">' . \$article_brief_a . '</p>';
-                echo '<div class=\"flex-article\">';
-                echo '<img class=\"my-img flex_img\" src=\"data:image;base64,' . base64_encode(\$deadpool_main) . '\" alt=\"IMAGE\">';
-                echo '<p class=\"short-para\">' . \$article_brief_b . '</p>';
-                echo '</div>';
+                echo '<h1 class=\"hidden article-title\">' . \$article_title . '</h1>';
+                echo '<p class=\"hidden short-para\">' . \$article_short_a . '</p>';
+                echo '<img class=\"hidden my-img full_img\" src=\"data:image;base64,' . base64_encode(\$deadpool_movie_logo) . '\" alt=\"IMAGE\">';
+                echo '<p class=\"hidden short-para\">' . \$article_short_b . '</p>';
+                echo '<p class=\"hidden short-para\">' . \$article_brief_a . '</p>';
+                echo '<img class=\"hidden my-img full_img\" src=\"data:image;base64,' . base64_encode(\$deadpool_main) . '\" alt=\"IMAGE\">';
+                echo '<p class=\"hidden short-para\">' . \$article_brief_b . '</p>';
             }
         } else {
             echo 'No images found.';
@@ -206,6 +214,8 @@ if (
     </ul >
 </div >
 <script src='../../scripts/svgAnimation.js'></script>
+<script src='../../scripts/animateDynamically.js'></script>
+
 </body >
 </html > ";
 
@@ -237,7 +247,7 @@ if (
 
         $resultB = mysqli_query($connection, $queryB);
     }
-    header("Location: ../pages/add/add_article_page.php?success=Article Added Successfuly");
+    header("Location: ../pages/add/add_article_page.php?success=Article Added Successfully");
 } else {
     header("Location: ../pages/add/add_article_page.php?error=Please fill out all the fields");
     exit();
