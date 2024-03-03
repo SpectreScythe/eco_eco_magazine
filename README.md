@@ -34,4 +34,4 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 
 ## Contact
 
-For questions or feedback, feel free to contact the project maintainer at (scythethroughtheheart05@gmail.com)
+For questions or feedback, feel free to contact the project maintainer at [scythethroughtheheart05@gmail.com]
