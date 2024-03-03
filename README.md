@@ -8,21 +8,18 @@ ECO ECO Magazine is designed to provide users with informative articles, tips, a
 
 ## Features
 
-- **Article Categories**: Browse articles by categories such as Lifestyle, Sustainability, Environment, Technology, etc.
+- **Article Categories**: Browse articles by categories such as Entertainment, Fashion, Sports, and Games.
 - **User Authentication**: Secure user authentication and authorization system for managing subscriptions, comments, and contributions.
-- **Responsive Design**: Mobile-friendly and responsive layout for seamless user experience across devices.
-- **Search Functionality**: Search for articles based on keywords, categories, or tags.
-- **Subscription Service**: Option for users to subscribe to newsletters and updates.
-- **Interactive Features**: Engage users with interactive elements like comments, likes, and sharing options.
+- **CRUD Operations for articles:** Allows proper error handling and user feedback for CRUD operations.
 
 ## Installation
 
 To run the project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/eco-eco-magazine.git`
-2. Navigate to the project directory: `cd eco-eco-magazine`
+1. Clone the repository: `git clone https://github.com/qarq90/eco_eco_magazine.git`
+2. Navigate to the project directory: `cd eco_eco_magazine`
 3. Set up the database by importing the provided SQL file.
-4. Configure the database connection settings in `config.php`.
+4. Configure the database connection settings in `database_generation.sql`.
 5. Start a local PHP server or use a development environment like XAMPP or WAMP.
 
 ## Contributing
@@ -35,10 +32,6 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 - Push to the branch: `git push origin feature/your-feature-name`
 - Submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Contact
 
-For questions or feedback, feel free to contact the project maintainer at [your-email@example.com](mailto:your-email@example.com).
+For questions or feedback, feel free to contact the project maintainer at ([scythethroughtheheart05@gmail.com])
