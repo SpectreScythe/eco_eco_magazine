@@ -1,10 +1,10 @@
 # ECO ECO Magazine
 
-Welcome to the ECO ECO Magazine project repository! This is a PHP micro project aimed at creating a magazine website focused on environmental sustainability and eco-friendly living.
+Welcome to the ECO ECO Magazine project repository! This is a PHP micro project aimed at creating a magazine website focused on categories such as Entertainment, Fashion, Sports, and Games.
 
 ## Overview
 
-ECO ECO Magazine is designed to provide users with informative articles, tips, and resources related to eco-conscious living, sustainable practices, environmental news, and more.
+ECO ECO Magazine is designed to provide users with informative articles, categories such as Entertainment, Fashion, Sports, and Games news and more.
 
 ## Features
 
