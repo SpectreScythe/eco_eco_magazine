@@ -18,7 +18,42 @@ if (
     $article_title = isset($_POST['article_title']);
     $author = isset($_POST['username']);
 
-    $htmlContent = "<!DOCTYPE html>
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $article_title = $_POST['article_title'];
+    $article_paraA = $_POST['article_paraA'];
+    $article_paraB = $_POST['article_paraB'];
+    $article_paraC = $_POST['article_paraC'];
+    $article_paraD = $_POST['article_paraD'];
+    $article_imgA = $_FILES['article_imgA'];
+    $article_imgB = $_FILES['article_imgB'];
+
+    if (empty($username)) {
+        header("Location: ../pages/add/add_article_page.php?username=❗     Username can't be empty");
+    } elseif (empty($email)) {
+        header("Location: ../pages/add/add_article_page.php?email=❗     Email can't be empty");
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: ../pages/add/add_article_page.php?email=❗     Invalid Email address");
+    } elseif (empty($article_title)) {
+        header("Location: ../pages/add/add_article_page.php?title=❗     Title can't be empty");
+    } elseif (empty($article_paraA)) {
+        header("Location: ../pages/add/add_article_page.php?paraA=❗     Paragraph A can't be empty");
+    } elseif (empty($article_paraB)) {
+        header("Location: ../pages/add/add_article_page.php?paraB=❗     Paragraph B can't be empty");
+    } elseif (empty($article_paraC)) {
+        header("Location: ../pages/add/add_article_page.php?paraC=❗     Paragraph C can't be empty");
+    } elseif (empty($article_paraD)) {
+        header("Location: ../pages/add/add_article_page.php?paraD=❗     Paragraph D can't be empty");
+    }
+    // elseif (count($article_imgA) ==) {
+    // header("Location: ../pages/add/add_article_page.php?imgA=❗     Paragraph D can't be empty");
+    // } elseif (count($article_imgB)) {
+    // header("Location: ../pages/add/add_article_page.php?imgB=❗     Paragraph D can't be empty");
+    // } 
+    else {
+
+        $htmlContent = "<!DOCTYPE html>
+    
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
@@ -97,8 +132,8 @@ if (
 
 <div class='article-container'>";
 
-    $url = "";
-    $htmlContent .= "<?php
+        $url = "";
+        $htmlContent .= "<?php
     include '../../php/database/connection.php';
 
     if(isset(\$_GET['value'])) {
@@ -133,8 +168,8 @@ if (
     mysqli_close(\$connection);
 ?>";
 
-    $htmlContent .= "</div>";
-    $htmlContent .= "
+        $htmlContent .= "</div>";
+        $htmlContent .= "
     <div class='footer' >
     <ul >
         <a href = '' target = '_blank' >
@@ -174,41 +209,36 @@ if (
 </body >
 </html > ";
 
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $article_title = $_POST['article_title'];
-    $article_paraA = $_POST['article_paraA'];
-    $article_paraB = $_POST['article_paraB'];
-    $article_paraC = $_POST['article_paraC'];
-    $article_paraD = $_POST['article_paraD'];
+        try {
+            $filePath = "../pages/entertainment/" . $article_title . ".php";
 
-    $filePath = "../pages/entertainment/" . $article_title . ".php";
+            $filePath = str_replace("'", "", $filePath);
 
-    $filePath = str_replace("'", "", $filePath);
+            file_put_contents($filePath, $htmlContent);
+            $tmp_nameA = $_FILES['article_imgA']['tmp_name'];
+            $tmp_nameB = $_FILES['article_imgB']['tmp_name'];
 
-    file_put_contents($filePath, $htmlContent);
+            $img_blobA = addslashes(file_get_contents($tmp_nameA));
+            $img_blobB = addslashes(file_get_contents($tmp_nameB));
 
-    $tmp_nameA = $_FILES['article_imgA']['tmp_name'];
-    $tmp_nameB = $_FILES['article_imgB']['tmp_name'];
+            $linkQuery = 'INSERT INTO eco_article_links (link) VALUES ("./entertainment/' . $article_title . '.php")';
 
-    $img_blobA = addslashes(file_get_contents($tmp_nameA));
-    $img_blobB = addslashes(file_get_contents($tmp_nameB));
+            $resultLink = mysqli_query($connection, $linkQuery);
 
-    $linkQuery = 'INSERT INTO eco_article_links (link) VALUES ("./entertainment/' . $article_title . '.php")';
+            $queryA = "INSERT INTO eco_eco_article (article_type, article_title, article_short_a, article_short_b, article_brief_a, article_brief_b, img_name, img_blobA, img_blobB) 
+   VALUES ('Entertainment', '$article_title', '$article_paraA', '$article_paraB', '$article_paraC', '$article_paraD', 'img_name', '$img_blobA', '$img_blobB')";
 
-    $resultLink = mysqli_query($connection, $linkQuery);
+            $resultA = mysqli_query($connection, $queryA);
+        } catch (mysqli_sql_exception $e) {
+            header("Location: ../pages/add/add_article_page.php?imgError=Select a smaller resolution image");
+        }
 
-    $queryA = "INSERT INTO eco_eco_article (article_type, article_title, article_short_a, article_short_b, article_brief_a, article_brief_b, img_name, img_blobA, img_blobB) 
-           VALUES ('Entertainment', '$article_title', '$article_paraA', '$article_paraB', '$article_paraC', '$article_paraD', 'img_name', '$img_blobA', '$img_blobB')";
+        $queryB = "INSERT INTO add_users (username,email) VALUES ('$username','$email')";
 
-    $resultA = mysqli_query($connection, $queryA);
-
-    $queryB = "INSERT INTO add_users (username,email) VALUES ('$username','$email')";
-
-    $resultB = mysqli_query($connection, $queryB);
-
-    header("Location: ../pages/add/add_article_page.php?error=Article Added Successfuly");
+        $resultB = mysqli_query($connection, $queryB);
+    }
+    header("Location: ../pages/add/add_article_page.php?success=Article Added Successfuly");
 } else {
-    header("Location: ../pages/add/add_article_page.php");
+    header("Location: ../pages/add/add_article_page.php?error=Please fill out all the fields");
     exit();
 }

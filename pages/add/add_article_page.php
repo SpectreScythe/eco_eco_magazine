@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    <div class="svg-div">
+        <svg viewBox="0 0 1000 620" fill="none" preserveAspectRatio="xMidyMax meet">
+            <path d="M5 0V26C5 42.5685 18.4315 56 35 56H792C808.569 56 822 69.4315 822 86V123C822 139.569 808.569 153 792 153H635C618.984 153 606 165.984 606 182V182C606 198.016 593.016 211 577 211H234C217.431 211 204 224.431 204 241V248C204 264.569 190.569 278 174 278H101C84.4315 278 71 291.431 71 308V317C71 333.569 84.4315 347 101 347H534.5C550.24 347 563 359.76 563 375.5V375.5C563 391.24 575.76 404 591.5 404H792C808.569 404 822 417.431 822 434V468C822 484.569 808.569 498 792 498H732.5C721.178 498 712 507.178 712 518.5V518.5C712 529.822 702.822 539 691.5 539H355.5C343.074 539 333 549.074 333 561.5V561.5C333 573.926 322.926 584 310.5 584H35C18.4314 584 5 597.431 5 614V615" stroke="#CCCCCC" stroke-width="10" />
+        </svg>
+    </div>
+
     <div class="nav">
         <ul>
             <a target="_blank" href="./../home.php">
@@ -66,8 +72,12 @@
         <form action="../../php/add_article.php" method="post" enctype="multipart/form-data">
             <h1>Add Article</h1>
 
-            <?php if (isset($_GET['error'])) { ?>
-                <p class="success"><?php echo $_GET['error'] ?></p>
+            <?php if (isset($_GET['username'])) { ?>
+                <p class="error"><?php echo $_GET['username'] ?></p>
+            <?php } ?>
+
+            <?php if (isset($_GET['success'])) { ?>
+                <p class="success"><?php echo $_GET['success'] ?></p>
             <?php } ?>
 
             <div class="input-container">
@@ -79,6 +89,10 @@
                 </label>
             </div>
 
+            <?php if (isset($_GET['email'])) { ?>
+                <p class="error"><?php echo $_GET['email'] ?></p>
+            <?php } ?>
+
             <div class="input-container">
                 <label>
                     Email
@@ -87,6 +101,10 @@
                     <input type="text" placeholder="Email ID" name="email" />
                 </label>
             </div>
+
+            <?php if (isset($_GET['title'])) { ?>
+                <p class="error"><?php echo $_GET['title'] ?></p>
+            <?php } ?>
 
             <div class="input-container">
                 <label>
@@ -97,6 +115,10 @@
                 </label>
             </div>
 
+            <?php if (isset($_GET['paraA'])) { ?>
+                <p class="error"><?php echo $_GET['paraA'] ?></p>
+            <?php } ?>
+
             <div class="input-container">
                 <label>
                     Article Paragraph A
@@ -105,6 +127,10 @@
                     <textarea placeholder="Paragraph A" name="article_paraA"></textarea>
                 </label>
             </div>
+
+            <?php if (isset($_GET['paraB'])) { ?>
+                <p class="error"><?php echo $_GET['paraB'] ?></p>
+            <?php } ?>
 
             <div class="input-container">
                 <label>
@@ -115,6 +141,10 @@
                 </label>
             </div>
 
+            <?php if (isset($_GET['paraC'])) { ?>
+                <p class="error"><?php echo $_GET['paraC'] ?></p>
+            <?php } ?>
+
             <div class="input-container">
                 <label>
                     Article Paragraph C
@@ -123,6 +153,10 @@
                     <textarea placeholder="Paragraph C" name="article_paraC"></textarea>
                 </label>
             </div>
+
+            <?php if (isset($_GET['paraD'])) { ?>
+                <p class="error"><?php echo $_GET['paraD'] ?></p>
+            <?php } ?>
 
             <div class="input-container">
                 <label>
@@ -133,23 +167,40 @@
                 </label>
             </div>
 
+            <?php if (isset($_GET['imgA'])) { ?>
+                <p class="error"><?php echo $_GET['imgA'] ?></p>
+            <?php } ?>
+
+            <?php if (isset($_GET['imgError'])) { ?>
+                <p class="error"><?php echo $_GET['imgError'] ?></p>
+            <?php } ?>
+
             <div class="input-container">
-                <label>
+                <label for="file-uploadA" id="img-label">
                     Article Image A
                 </label>
-                <label for="imgA">
-                    <input class="custom-file-upload" type="file" accept="image/*" name="article_imgA">
+                <label class="custom-file-upload" for="file-uploadA">
+                    Upload Image
                 </label>
+                <input class="file-input" type="file" id="file-uploadA" accept="image/*" name="article_imgA">
             </div>
 
+            <?php if (isset($_GET['imgB'])) { ?>
+                <p class="error"><?php echo $_GET['imgB'] ?></p>
+            <?php } ?>
+
+            <?php if (isset($_GET['imgError'])) { ?>
+                <p class="error"><?php echo $_GET['imgError'] ?></p>
+            <?php } ?>
 
             <div class="input-container">
-                <label>
+                <label for="file-uploadB" id="img-label">
                     Article Image B
                 </label>
-                <label for="imgB">
-                    <input class="custom-file-upload" type="file" accept="image/*" name="article_imgB">
+                <label class="custom-file-upload" for="file-uploadB">
+                    Upload Image
                 </label>
+                <input class="file-input" type="file" id="file-uploadB" accept="image/*" name="article_imgB">
             </div>
 
 
@@ -185,6 +236,9 @@
             </a>
         </ul>
     </div>
+
+    <script src="../../scripts/svgAnimation.js"></script>
+
 </body>
 
 </html>

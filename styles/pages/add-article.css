@@ -102,7 +102,7 @@
 
 div > .custom-file-upload {
     width: 90%;
-    margin-left: 0.50rem;
+    margin-left: 0.5rem;
     display: inline-block;
     padding: 10px 20px;
     cursor: pointer;
@@ -113,10 +113,19 @@ div > .custom-file-upload {
     margin-top: -2rem;
 }
 
-/*input[type="file"] {*/
-/*    height: 0;*/
-/*    display: none;*/
-/*}*/
+.error {
+    margin-top: 2.3rem;
+    margin-left: 1.4rem;
+    border-radius: 10px;
+    width: 90%;
+    padding: 0.75rem;
+    height: 2rem;
+    justify-content: center;
+    display: flex;
+    color: var(--primary-background-color);
+    align-items: center;
+    background-color: var(--error-color-red);
+}
 
 .success {
     margin-left: 1.4rem;
@@ -125,8 +134,31 @@ div > .custom-file-upload {
     padding: 0.75rem;
     height: 2rem;
     display: flex;
+    justify-content: center;
     color: var(--success-color-green);
     align-items: center;
     border: 1px solid var(--success-color-green);
 }
 
+#img-label {
+    margin-bottom: 2.5rem;
+}
+
+.custom-file-upload {
+    background-color: #4caf50;
+    margin-bottom: -2rem;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #45a049;
+}
+
+.file-input {
+    display: none;
+}
