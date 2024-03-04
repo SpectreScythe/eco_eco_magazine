@@ -2,7 +2,7 @@
     /* General */
 
     --primary-background-color: #202020;
-    --priamry-text-color: #9f9f9f;
+    --primary-text-color: #9f9f9f;
     --secondary-background-color: #3f3f3f;
     --secondary-text-color: #cccccc;
 
@@ -10,6 +10,7 @@
 
     --error-color-red: #ff003c;
     --success-color-green: #00ff00;
+    --primary-hover-color: #333333;
 
     /*  Nav & Footer  */
 

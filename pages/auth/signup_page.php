@@ -16,17 +16,15 @@
             </form>
         </div>
         <div class="hidden login-container">
-            <form action="../../php/signup.php" class="hidden login-form" method="post">
-                <div class="hidden container-type">
+            <form action="../../php/signup.php" class="hidden login-form" method="post" onsubmit="return validateSignup()">
+                <div class="hidden container-type" id="auth-type">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z" style="fill: #cccccc" />
                     </svg>
                     <h1>Sign Up</h1>
                 </div>
-                <?php if (isset($_GET['error'])) { ?>
-                    <p class="hidden error"><?php echo $_GET['error'] ?></p>
-                <?php } ?>
+                <p class="hidden error" id="error"></p>
                 <label class="hidden input-title">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -35,7 +33,7 @@
                     User Name
                 </label>
                 <label>
-                    <input name="username" placeholder="User Name" type="text">
+                    <input name="username" placeholder="User Name" type="text" id="username">
                 </label>
                 <label class="hidden input-title">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -45,7 +43,7 @@
                     Phone Number
                 </label>
                 <label>
-                    <input name="phonenumber" placeholder="Phone Number" type="text" maxlength="10">
+                    <input name="phonenumber" placeholder="Phone Number" type="text" maxlength="10" id="phone">
                 </label>
                 <label class="hidden input-title">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -55,7 +53,7 @@
                     Email ID
                 </label>
                 <label>
-                    <input name="email" placeholder="Email ID" type="text">
+                    <input name="email" placeholder="Email ID" type="text" id="email">
                 </label>
                 <label class="hidden input-title">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -65,15 +63,16 @@
                     Password
                 </label>
                 <label>
-                    <input name="password" placeholder="Password" type="password">
+                    <input name="password" placeholder="Password" type="password" id="password">
                 </label>
-                <button type="submit">Sign Up</button>
+                <button type="submit" value="submit">Sign Up</button>
                 <a href="login_page.php">Already have an account? Login Now</a>
             </form>
         </div>
 
     </div>
     <script src="../../scripts/animateDynamically.js"></script>
+    <script src="../../scripts/authValidate.js"></script>
 
 </body>
 
