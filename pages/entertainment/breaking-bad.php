@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <title>eco eco | Breaking Bad</title>
     <link rel="stylesheet" href="../../styles/globals.css">
-    <link rel="stylesheet" href="../../styles/pages/home.css">
-    <link rel="stylesheet" href="../../styles/pages/utopia.css">
+    <link rel="stylesheet" href="../../styles/home.css">
+    <link rel="stylesheet" href="../../styles/utopia.css">
 </head>
 
 <body>
 
     <?php
-    include '../../components/svg.php';
-    include '../../components/pages/nav.php';
+    include '../../components/ui/Nav/InnerNav.php';
     ?>
 
     <?php
-    include '../../components/pages/content.php';
+    include "../../components/pages/ArticleBody.php";
     ?>
 
     <?php
-    include "../../components/pages/footer.php";
+    include "../../components/ui/Footer/InnerFooter.php";
     ?>

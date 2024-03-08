@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <title>eco eco | Deadpool</title>
     <link rel="stylesheet" href="../../styles/globals.css">
-    <link rel="stylesheet" href="../../styles/pages/home.css">
+    <link rel="stylesheet" href="../../styles/home.css">
 </head>
 
 <body>
 
     <?php
-    include '../../components/svg.php';
-    include '../../components/pages/nav.php';
+    include '../../components/ui/Nav/InnerNav.php';
     ?>
 
     <?php
-    include '../../components/pages/content.php';
+    include "../../components/pages/ArticleBody.php";
     ?>
 
     <?php
-    include "../../components/pages/footer.php";
+    include "../../components/ui/Footer/InnerFooter.php";
     ?>

@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <title>eco eco | Entertainment</title>
     <link rel="stylesheet" href="../styles/globals.css">
-    <link rel="stylesheet" href="../styles/pages/home.css">
-    <link rel="stylesheet" href="../styles/pages/entertainment.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/entertainment.css">
 </head>
 
 <body>
 
     <?php
 
-    include '../components/svg.php';
-    include '../components/nav.php';
+    include '../components/ui/Nav/OuterNav.php';
 
     ?>
 
@@ -52,7 +51,7 @@
                     $article_short_a = substr($article_short_a, 0, 80);
 
                     echo '<div class="hidden card-grid">';
-                    echo '<a href="' . $article_links[$i] . '?value=' . $article_title . '" target="_blank">';
+                    echo '<a href="' . $article_links[$i] . '?value=' . $article_title . '">';
                     echo "<div class='home-cards'> ";
                     echo '<img class="hidden card-img" src="data:image;base64,' . base64_encode($deadpool_movie_logo) . '" alt="IMAGE">';
                     echo "<div class='card-text'> ";
@@ -74,7 +73,5 @@
     </div>
 
     <?php
-
-    include "../components/footer.php";
-
+    include "../components/ui/Footer/OuterFooter.php";
     ?>

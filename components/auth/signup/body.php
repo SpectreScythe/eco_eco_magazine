@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>eco eco | Sign Up</title>
     <link href="../../styles/globals.css" rel="stylesheet">
-    <link href="../../styles/pages/auth.css" rel="stylesheet">
+    <link href="../../styles/auth.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
             </form>
         </div>
         <div class="hidden login-container">
-            <form action="../../php/signup.php" class="hidden login-form" method="post" onsubmit="return validateSignup()">
+            <form action="../../php/auth/signup/script.php" class="hidden login-form" method="post" onsubmit="return validateSignup()">
                 <div class="hidden container-type" id="auth-type">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                         <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->

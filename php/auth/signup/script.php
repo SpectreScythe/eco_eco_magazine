@@ -1,6 +1,8 @@
 <?php
 
-include "./database/connection.php";
+session_start();
+
+include "../../database/connection.php";
 
 function generateRandomString()
 {
@@ -26,19 +28,21 @@ if (isset($_POST['username']) && isset($_POST['phonenumber']) && isset($_POST['e
 
     $query = "SELECT * FROM users WHERE USER_EMAIL = '$email'";
     $result = mysqli_query($connection, $query);
-    $usersArray = mysqli_fetch_array($result, MYSQLI_NUM);
+    $usersArray = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    print_r($usersArray);
 
-    if (in_array($email, $usersArray) || empty($usersArray)) {
-        header("Location: ../pages/auth/signup_page.php?error=Email already exists");
+    if ($usersArray) {
+        header("Location: ../../../pages/auth/signup_page.php?error=Email already exists");
         exit();
     } else {
         $user_id = generateRandomString();
+        $_SESSION['USER_ID'] = $user_id;
         $query = "INSERT INTO users (USER_ID, USER_NAME, USER_PHONE_NUMBER, USER_EMAIL, USER_PASSWORD) VALUES ('$user_id','$username','$phonenumber','$email','$password')";
         $result = mysqli_query($connection, $query);
-        header("Location: ../pages/home.php");
+        header("Location: ../../../pages/home.php");
         exit();
     }
 } else {
-    header("Location: ../pages/404_not_found.php");
+    header("Location: ../../../pages/404_not_found.php");
     exit();
 }

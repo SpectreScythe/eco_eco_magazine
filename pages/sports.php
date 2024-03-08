@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>eco eco | Sports</title>
     <link rel="stylesheet" href="../styles/globals.css">
-    <link rel="stylesheet" href="../styles/pages/home.css">
+    <link rel="stylesheet" href="../styles/home.css">
 </head>
 
 <body>

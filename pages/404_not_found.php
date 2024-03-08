@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <title>eco eco | 404</title>
     <link href="../styles/globals.css" rel="stylesheet">
-    <link href="../styles/pages/404.css" rel="stylesheet">
+    <link href="../styles/404.css" rel="stylesheet">
 </head>
 
 <body>
     <?php
 
-    include '../components/nav.php';
+    include '../components/ui/Nav/OuterNav.php';
 
     ?>
     <div class="page-not-found">
@@ -21,6 +21,5 @@
 
     <?php
 
-    include "../components/footer.php";
-
+    include "../components/ui/Footer/OuterFooter.php";
     ?>

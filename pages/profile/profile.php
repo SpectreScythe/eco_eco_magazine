@@ -1,12 +1,15 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>eco eco | Utopia</title>
+    <title>eco eco | Profile</title>
     <link rel="stylesheet" href="../../styles/globals.css">
     <link rel="stylesheet" href="../../styles/home.css">
-    <link rel="stylesheet" href="../../styles/utopia.css">
+    <link rel="stylesheet" href="../../styles/profile.css">
 </head>
 
 <body>
@@ -16,7 +19,7 @@
     ?>
 
     <?php
-    include "../../components/pages/ArticleBody.php";
+    include '../../components/pages/profile/body.php';
     ?>
 
     <?php
