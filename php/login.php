@@ -8,7 +8,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $password = $_POST['password'];
 
     header("Location: ../pages/auth/login_page.php?error=Password is Required");
-    $query = "SELECT * FROM eco_eco_users WHERE email = '$email' AND password = '$password'";
+    $query = "SELECT * FROM users WHERE USER_EMAIL = '$email' AND USER_PASSWORD = '$password'";
     $result = mysqli_query($connection, $query);
 
     if (mysqli_num_rows($result)) {

@@ -50,7 +50,7 @@ body {
             align-items: center;
 
             &:hover {
-                color: var(--priamry-text-color);
+                color: var(--primary-text-color);
             }
 
             > svg {
@@ -60,7 +60,7 @@ body {
                 color: var(--NF-text-color);
 
                 &:hover {
-                    color: var(--priamry-text-color);
+                    color: var(--primary-text-color);
                 }
             }
         }
@@ -84,7 +84,7 @@ a {
     padding: 2rem 0;
     font-family: Chomsky;
     font-size: 3.75rem;
-    color: var(--priamry-text-color);
+    color: var(--primary-text-color);
 }
 
 .short-para {
@@ -96,7 +96,7 @@ a {
     border-radius: 10px;
     padding: 2rem;
     font-family: Penna;
-    color: var(--priamry-text-color);
+    color: var(--primary-text-color);
 }
 
 .article-container {
@@ -135,7 +135,7 @@ svg {
 }
 
 .author {
-    color: var(--priamry-text-color);
+    color: var(--primary-text-color);
 }
 
 .hidden {
