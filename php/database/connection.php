@@ -3,7 +3,7 @@
 $userhost = "localhost";
 $username = "root";
 $password = "";
-$database = "eco_eco_database";
+$database = "eco_eco";
 
 $connection = mysqli_connect($userhost, $username, $password, $database);
 

@@ -1,5 +1,64 @@
 
-.user-profile{
-    width: 50rem;
-    background-color: #4caf50;
+.user-profile {
+    background-image: url("../images/backgrounds/bg- (10).png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(63, 63, 63, 0.75);
+    -webkit-backdrop-filter: blur(5px) saturate(83%);
+    backdrop-filter: blur(5px) saturate(83%);
+    font-family: sans-serif;
+    padding: 5rem 15rem;
+    color: var(--primary-text-color);
+
+    > .header-title {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #ccc;
+        margin-bottom: 2rem;
+    }
 }
+
+.profile-values {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+
+    > .title-icon {
+        > svg {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 2rem;
+        }
+    }
+
+    > .value-content {
+        width: 90%;
+    }
+
+    > div {
+        > button {
+            height: 2rem;
+            background-color: transparent;
+            border: none;
+            width: 2rem;
+
+            > svg {
+                background-color: transparent;
+                width: 1.75rem;
+                height: 1.75rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.detail-value {
+    padding-top: 0.5rem;
+}
+
+#password {
+    display: none;
+}
+

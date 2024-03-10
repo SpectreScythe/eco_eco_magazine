@@ -32,6 +32,7 @@
 
 <script src="../../scripts/svgAnimation.js"></script>
 <script src="../../scripts/animateDynamically.js"></script>
+<script src="../../scripts/profile.js"></script>
 
 </body>
 

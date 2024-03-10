@@ -4,7 +4,7 @@ session_start();
 
 include "../../database/connection.php";
 
-function generateRandomString()
+function generateRandomString() : string
 {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
