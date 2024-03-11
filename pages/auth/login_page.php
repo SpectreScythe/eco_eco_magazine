@@ -1,2 +1,3 @@
 <?php
-include '../../components/auth/login/body.php';
+include '../../components/pages/auth/login/body.php';
+

@@ -1,16 +1,15 @@
 <?php
-function generateRandomString($length = 40)
-{
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
-    $randomString = '';
+include "../php/database/connection.php";
 
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[random_int(0, $charactersLength - 1)];
-    }
+$fetchArticles = 'SELECT * FROM articles';
+$result = mysqli_query($connection, $fetchArticles);
 
-    return $randomString;
+while ($row = mysqli_fetch_assoc($result)) {
+    $img = base64_encode($row['ARTICLE_IMG_A']);
+    ?>
+
+    <img src="data:image/jpeg;base64,<?php echo $img; ?>" alt="Article Image">
+
+    <?php
 }
-
-$randomString = generateRandomString();
-echo $randomString;
+?>
