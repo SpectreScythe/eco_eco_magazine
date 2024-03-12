@@ -1,5 +1,5 @@
 .edit-profile {
-    background-image: url("../images/backgrounds/bg- (5).png");
+    background-image: url("../images/backgrounds/profile (2).png");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(63, 63, 63, 0.75);
@@ -30,6 +30,20 @@
     letter-spacing: 1.5px;
 }
 
+.deleted {
+    margin-top: 3rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    height: 2rem;
+    color: var(--primary-background-color);
+    background-color: var(--success-color-green);
+    letter-spacing: 1.5px;
+}
+
 .update-form {
     > form {
         padding: 0 15rem;
@@ -51,7 +65,7 @@
             font-size: 1.25rem;
 
             > input {
-                width: 500px;
+                width: 100%;
                 padding: 0.75rem;
                 outline: none;
                 background-color: var(--primary-text-color);
@@ -71,15 +85,15 @@
             background-color: var(--primary-background-color);
             margin: 2rem 0;
             padding: 0.75rem;
-            width: 520px;
+            width: 105%;
             border: 1px transparent solid;
             border-radius: 10px;
             color: var(--secondary-text-color);
             font-size: 1rem;
-            transition: 0.25s all linear;
+            transition: 0.25s all ease-in;
 
             &:hover {
-                background-color: var(--primary-hover-color);
+                background-color: var(--secondary-background-color);
                 cursor: pointer;
             }
         }

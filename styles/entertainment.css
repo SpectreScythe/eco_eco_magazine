@@ -12,6 +12,16 @@ body {
     }
 }
 
+.card-gridB {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 10rem;
+
+    > a > div > img > div {
+        color: var(--primary-text-color);
+    }
+}
+
 .home-cards {
     display: flex;
     align-items: center;

@@ -98,6 +98,7 @@ a {
 }
 
 .article-container {
+    font-family: "Times New Roman", serif;
     padding: 2rem 7rem;
 }
 
@@ -156,4 +157,14 @@ svg {
     top: 0;
     left: -5%;
     scale: 1.01;
+}
+
+.user-articles {
+    background-image: url("../images/backgrounds/profile (1).png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a {
+    color: var(--primary-text-color);
 }
