@@ -116,7 +116,10 @@
     </div>
 
     <div class="update-form">
-        <form action="../../php/update-profile/script.php" method="post">
+        <form action="../../php/profile/update-profile/script.php" method="post">
+            <?php if (isset($_GET['error'])) { ?>
+                <p class="hidden error"><?php echo $_GET['error'] ?></p>
+            <?php } ?>
             <?php if (isset($_GET['value'])) { ?>
                 <p class="hidden updated"><?php echo $_GET['value'] ?></p>
             <?php } ?>
@@ -171,4 +174,65 @@
             <button type="submit" value="submit">Save Changes</button>
         </form>
     </div>
+</div>
+
+<div class="user-articles">
+    <div class="hidden header-title">
+        <h1>Your Articles</h1>
+        <p>You can view your articles and delete them if needed.</p>
+    </div>
+    <?php if (isset($_GET['delete'])) { ?>
+        <p class="hidden deleted"><?php echo $_GET['delete'] ?></p>
+    <?php } ?>
+    <?php
+
+    include "../../php/profile/articles/script.php";
+
+    if (mysqli_num_rows($result)) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $ARTICLE_LINK = $row['ARTICLE_LINK'];
+            $ARTICLE_TITLE = $row['ARTICLE_TITLE'];
+            $ARTICLE_PARA_A = $row['ARTICLE_PARA_A'];
+            $ARTICLE_CARD_IMG = $row['ARTICLE_IMG_A'];
+            $ARTICLE_ID = $row['ARTICLE_ID'];
+            $ARTICLE_PARA_A = substr($ARTICLE_PARA_A, 0, 100);
+            ?>
+
+            <div class="hidden card-gridB user-article">
+                <a href="../<?= $ARTICLE_LINK ?>?value=<?= $ARTICLE_TITLE ?>">
+                    <div class="home-cards">
+                        <img class="hidden card-img" src="data:image;base64,<?= $ARTICLE_CARD_IMG ?>" alt="IMAGE">
+                        <div class="card-text">
+                            <h1><?= $ARTICLE_TITLE ?></h1>
+                            <p><?= $ARTICLE_PARA_A ?>....... </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hidden btn-container">
+                <form action="../../php/profile/delete/script.php" method="post">
+                    <label for="del-title"></label>
+                    <input type="text" value="<?= $ARTICLE_ID ?>" id="del-title" name="del-title">
+                    <button class="hidden del-btn" type="submit">Delete Article</button>
+                </form>
+            </div>
+
+            <div class="hidden btn-container">
+                <form action="../../php/profile/getPDF/script.php" method="post">
+                    <label for="del-title"></label>
+                    <input type="text" value="<?= $ARTICLE_ID ?>" id="del-title" name="del-title">
+                    <button class="hidden del-btn">Get PDF</button>
+                </form>
+            </div>
+
+            <?php
+        }
+    } else {
+        echo '<p class="error">You have not uploaded any articles</p>';
+    }
+
+    mysqli_close($connection);
+    ?>
+
 </div>

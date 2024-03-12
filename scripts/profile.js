@@ -3,7 +3,7 @@ const hiddenPassword = document.getElementById('hidden')
 const passwordToggler = document.getElementById('passwordButton')
 
 const password = userPassword.textContent
-const hide = '********'
+const hide = '**************************'
 
 let flag = false
 

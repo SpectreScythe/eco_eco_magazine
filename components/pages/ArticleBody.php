@@ -17,14 +17,25 @@
             $ARTICLE_PARA_D = $row['ARTICLE_PARA_D'];
             $ARTICLE_IMG_A = $row['ARTICLE_IMG_A'];
             $ARTICLE_IMG_B = $row['ARTICLE_IMG_B'];
+            ?>
 
-            echo '<h1 class="hidden article-title">' . $ARTICLE_TITLE . '</h1>';
-            echo '<p class="hidden short-para">' . $ARTICLE_PARA_A . '</p>';
-            echo '<img class="hidden my-img full_img" src="data:image;base64,' . base64_encode($ARTICLE_IMG_A) . '" alt="IMAGE" />';
-            echo '<p class="hidden short-para">' . $ARTICLE_PARA_B . '</p>';
-            echo '<p class="hidden short-para">' . $ARTICLE_PARA_C . '</p>';
-            echo '<img class="hidden my-img full_img" src="data:image;base64,' . base64_encode($ARTICLE_IMG_B) . '" alt="IMAGE" />';
-            echo '<p class="hidden short-para">' . $ARTICLE_PARA_D . '</p>';
+            <div class="content-sectionA">
+                <h1 class="hidden article-title"><?php echo $ARTICLE_TITLE; ?></h1>
+                <p class="hidden short-para"><?php echo $ARTICLE_PARA_A; ?></p>
+                <img class="hidden my-img full_img" src="data:image;base64,<?php echo $ARTICLE_IMG_A; ?>" alt="IMAGE" />
+            </div>
+
+            <div class="content-sectionB">
+                <p class="hidden short-para"><?php echo $ARTICLE_PARA_B; ?></p>
+                <p class="hidden short-para"><?php echo $ARTICLE_PARA_C; ?></p>
+            </div>
+
+            <div class="content-sectionC">
+                <img class="hidden my-img full_img" src="data:image;base64,<?php echo $ARTICLE_IMG_B; ?>" alt="IMAGE" />
+                <p class="hidden short-para"><?php echo $ARTICLE_PARA_D; ?></p>
+            </div>
+
+            <?php
         }
     } else {
         echo 'No images found.';

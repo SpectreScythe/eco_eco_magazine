@@ -11,6 +11,8 @@ session_start();
     <link rel="stylesheet" href="../../styles/home.css">
     <link rel="stylesheet" href="../../styles/profile.css">
     <link rel="stylesheet" href="../../styles/update-form.css">
+    <link rel="stylesheet" href="../../styles/entertainment.css">
+
 </head>
 
 <body>

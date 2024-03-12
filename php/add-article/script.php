@@ -97,8 +97,8 @@ if (
         $tmp_nameA = $_FILES['article_imgA']['tmp_name'];
         $tmp_nameB = $_FILES['article_imgB']['tmp_name'];
 
-        $img_blobA = addslashes(file_get_contents($tmp_nameA));
-        $img_blobB = addslashes(file_get_contents($tmp_nameB));
+        $img_blobA = base64_encode(file_get_contents($tmp_nameA));
+        $img_blobB = base64_encode(file_get_contents($tmp_nameB));
 
         $query = "INSERT INTO articles (ARTICLE_ID, AUTHOR_ID, ARTICLE_TITLE, ARTICLE_PARA_A, ARTICLE_PARA_B, ARTICLE_PARA_C, ARTICLE_PARA_D, ARTICLE_IMG_A, ARTICLE_IMG_B, ARTICLE_LINK) 
               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
