@@ -6,11 +6,24 @@ Welcome to the ECO ECO Magazine project repository! This is a PHP micro project 
 
 ECO ECO Magazine is designed to provide users with informative articles, categories such as Entertainment, Fashion, Sports, and Games news and more.
 
+
+![image](https://github.com/qarq90/eco_eco_magazine/assets/124421417/44617717-1a7b-45d9-b76a-4d4a59d0101d)
+
+
 ## Features
 
 - **Article Categories**: Browse articles by categories such as Entertainment, Fashion, Sports, and Games.
 - **User Authentication**: Secure user authentication and authorization system for managing subscriptions, comments, and contributions.
-- **CRUD Operations for articles:** Allows proper error handling and user feedback for CRUD operations.
+- **PDF Download**: Users have the option to download their articles as PDF files, providing them with a convenient way to save and share their content.
+
+![image](https://github.com/qarq90/eco_eco_magazine/assets/124421417/b1ab2258-2b00-4148-91f3-f2047151a810)
+
+
+![image](https://github.com/qarq90/eco_eco_magazine/assets/124421417/ef9b32ca-240b-423e-9498-0e1e1eace2e5)
+
+
+![image](https://github.com/qarq90/eco_eco_magazine/assets/124421417/def65bd1-1d49-4624-b2f2-19005eb9ed6a)
+
 
 ## Installation
 
