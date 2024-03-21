@@ -70,7 +70,7 @@ if (
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
-    <title>eco eco | Added Article</title>
+    <title>GUNDA BOIZ | Added Article</title>
     <link href='../../styles/globals.css' rel='stylesheet'>
 </head>
 <body>

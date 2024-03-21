@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>eco eco | Login</title>
+    <title>GUNDA BOIZ | Login</title>
     <link href="../../styles/globals.css" rel="stylesheet">
     <link href="../../styles/auth.css" rel="stylesheet">
 </head>

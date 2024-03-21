@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>eco eco | Breaking Bad</title>
+    <title>GUNDA BOIZ | Breaking Bad</title>
     <link rel="stylesheet" href="../../styles/globals.css">
     <link rel="stylesheet" href="../../styles/home.css">
     <link rel="stylesheet" href="../../styles/utopia.css">

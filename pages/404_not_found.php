@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>eco eco | 404</title>
+    <title>GUNDA BOIZ | 404</title>
     <link href="../styles/globals.css" rel="stylesheet">
     <link href="../styles/404.css" rel="stylesheet">
 </head>

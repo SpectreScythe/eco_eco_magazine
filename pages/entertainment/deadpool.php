@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>eco eco | Deadpool</title>
+    <title>GUNDA BOIZ | Deadpool</title>
     <link rel="stylesheet" href="../../styles/globals.css">
     <link rel="stylesheet" href="../../styles/home.css">
 </head>

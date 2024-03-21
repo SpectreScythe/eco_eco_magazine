@@ -6,7 +6,7 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <title>eco eco | Add Article</title>
+    <title>GUNDA BOIZ | Add Article</title>
     <link rel="stylesheet" href="../../styles/globals.css">
     <link rel="stylesheet" href="../../styles/home.css">
     <link rel="stylesheet" href="../../styles/add-article.css">

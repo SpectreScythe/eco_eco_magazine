@@ -6,7 +6,7 @@
 <div class="hidden nav main">
     <ul>
         <a href="./home.php">
-            <li>ECO ECO</li>
+            <li>GUNDA BOIZ</li>
         </a>
         <a href="../arya/new.php">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">

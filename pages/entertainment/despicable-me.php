@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>eco eco | Despicable Me 4</title>
+    <title>GUNDA BOIZ | Despicable Me 4</title>
     <link rel="stylesheet" href="../../styles/globals.css">
     <link rel="stylesheet" href="../../styles/home.css">
 </head>

@@ -1,7 +1,7 @@
 <div class="hidden footer main">
     <ul>
         <a href="">
-            <p>© 2024 ECO ECO. All rights reserved.</p>
+            <p>© 2024 GUNDA BOIZ. All rights reserved.</p>
         </a>
         <a href="https://gmail.com">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
