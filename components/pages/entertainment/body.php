@@ -16,7 +16,7 @@
                 $ARTICLE_CARD_IMG = $row['ARTICLE_IMG_A'];
 
                 $ARTICLE_PARA_A = substr($ARTICLE_PARA_A, 0, 100);
-                $ARTICLE_TITLE = substr($ARTICLE_TITLE, 0, 20);
+                $ARTICLE_TITLE_A = substr($ARTICLE_TITLE, 0, 20);
 
                 ?>
 
@@ -26,7 +26,7 @@
                             <img class="hidden card-img" src="data:image;base64,<?php echo $ARTICLE_CARD_IMG ?>"
                                  alt="IMAGE">
                             <div class="card-text">
-                                <h1><?php echo $ARTICLE_TITLE ?></h1>
+                                <h1><?php echo $ARTICLE_TITLE_A ?></h1>
                                 <p><?php echo $ARTICLE_PARA_A ?>....... </p>
                             </div>
                         </div>

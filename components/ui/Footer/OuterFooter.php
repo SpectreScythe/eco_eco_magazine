@@ -1,5 +1,5 @@
 <div class="hidden footer main">
-    <ul>
+    <ul id="outer-nav">
         <a href="">
             <p>© 2024 GUNDA BOIZ. All rights reserved.</p>
         </a>

@@ -76,5 +76,5 @@ body {
 .main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    z-index: 10;
+    z-index: 1000000;
 }

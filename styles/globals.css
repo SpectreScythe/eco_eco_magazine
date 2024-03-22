@@ -166,3 +166,8 @@ svg {
 a {
     color: var(--primary-text-color);
 }
+
+#outer-nav{
+    width: 100%;
+    padding-left: 60%;
+}
