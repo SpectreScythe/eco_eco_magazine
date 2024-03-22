@@ -2,14 +2,18 @@ body {
     font-family: sans-serif;
 }
 
-.card-grid {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 10rem;
+#my-grid {
 
-    > a {
-        color: var(--primary-text-color);
-    }
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+}
+
+.card-grid > a {
+    color: var(--primary-text-color);
 }
 
 .card-gridB {
@@ -20,6 +24,11 @@ body {
     > a > div > img > div {
         color: var(--primary-text-color);
     }
+
+    >a{
+        background-color: #222222;
+        width: 20rem !important;
+    }
 }
 
 .home-cards {
@@ -29,8 +38,8 @@ body {
     -webkit-backdrop-filter: blur(5px) saturate(83%);
     background-color: rgba(50, 50, 50, 0.75);
     color: var(--primary-color-text);
-    width: 100%;
-    height: auto;
+    width: 42rem;
+    height: 12rem;
     padding: 1rem;
     border-radius: 10px;
     transition: 0.25s all linear;
@@ -65,5 +74,7 @@ body {
 }
 
 .main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     z-index: 10;
 }

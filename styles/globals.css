@@ -99,7 +99,7 @@ a {
 
 .article-container {
     font-family: "Times New Roman", serif;
-    padding: 2rem 7rem;
+    padding: 2rem 12rem;
 }
 
 .full_img {
@@ -160,9 +160,7 @@ svg {
 }
 
 .user-articles {
-    background-image: url("../images/backgrounds/profile (1).png");
-    background-size: cover;
-    background-repeat: no-repeat;
+
 }
 
 a {

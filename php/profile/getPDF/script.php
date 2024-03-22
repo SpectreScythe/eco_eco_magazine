@@ -13,25 +13,39 @@ if (isset($_POST['del-title'])) {
     $result = mysqli_query($connection, $query);
     $data = mysqli_fetch_assoc($result);
 
+    // Article Title
+
     $articlePDF->SetFont('Arial', 'B', 50);
-    $articlePDF->Cell(0, 10, $data['ARTICLE_TITLE'], 0, 2, 'l');
-    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
-    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $titleChunks = str_split($data['ARTICLE_TITLE'], 20);
+
+    foreach ($titleChunks as $titleChunk) {
+        $articlePDF->Cell(0, 18, $titleChunk, 0, 2, 'l');
+    }
+
+    // Spacing
+
+    for ($i = 0; $i < count($titleChunks); $i++) {
+        $articlePDF->Cell(0, 2, "", 0, 2, 'l');
+    }
+
+    // Paragraph A
 
     $articlePDF->SetFont('Arial', '', 15);
 
     $paraPartsA = str_split($data['ARTICLE_PARA_A'], 75);
     $imgAGap = (count($paraPartsA) * 16) / 2;
     foreach ($paraPartsA as $partA) {
-        $articlePDF->Cell(0, 5, $partA, 0, 2, 'l');
+        $articlePDF->Cell(0, 7, $partA, 0, 2, 'l');
     }
 
-    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    for ($i = 0; $i < count($paraPartsA); $i++) {
+        $articlePDF->Cell(0, 2, "", 0, 2, 'l');
+    }
 
     $tempImagePathA = '../../../images/pdf/temp_imageA.jpg';
     $imageData = base64_decode($data['ARTICLE_IMG_A']);
     if (file_put_contents($tempImagePathA, $imageData) !== false) {
-        $articlePDF->Image($tempImagePathA, 10, $imgAGap, 190);
+        $articlePDF->Image($tempImagePathA, 10, count($titleChunks) + count($paraPartsA) + 100, 190);
     } else {
         echo "Failed to create image file.";
     }
