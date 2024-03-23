@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    
+
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
@@ -8,15 +8,15 @@
 </head>
 <body>
 <?php
-        include '../../components/ui/Nav/InnerNav.php';
-        ?>
- 
-    <div class='hidden article-container'>    
-        <?php
-        include '../../components/pages/ArticleBody.php';
-        ?>
-    </div>
-    
-        <?php
-        include '../../components/ui/Footer/InnerFooter.php';
-        ?> 
+include '../../components/ui/Nav/InnerNav.php';
+?>
+
+<div class='hidden article-container'>
+    <?php
+    include '../../components/pages/ArticleBody.php';
+    ?>
+</div>
+
+<?php
+include '../../components/ui/Footer/InnerFooter.php';
+?>
