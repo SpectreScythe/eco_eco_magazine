@@ -70,7 +70,7 @@
         <nav>
             <h1 class="cultitle">Retro</h1>
             <ul>
-                <a href="F:\CSS1\main\new.html">
+                <a href="./new.php">
                     <li><i class="fa fa-arrow-left" style="font-size:24px;color:white"></i>
                 </a>
             </ul>

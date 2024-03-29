@@ -42,13 +42,17 @@ if (isset($_POST['del-title'])) {
         $articlePDF->Cell(0, 2, "", 0, 2, 'l');
     }
 
+    // Image A
+
     $tempImagePathA = '../../../images/pdf/temp_imageA.jpg';
     $imageData = base64_decode($data['ARTICLE_IMG_A']);
     if (file_put_contents($tempImagePathA, $imageData) !== false) {
-        $articlePDF->Image($tempImagePathA, 10, count($titleChunks) + count($paraPartsA) + 100, 190);
+        $articlePDF->Image($tempImagePathA, 10, count($paraPartsA) + 85, 190);
     } else {
         echo "Failed to create image file.";
     }
+
+    // Spacing
 
     $articlePDF->Cell(0, 10, "", 0, 2, 'l');
     $articlePDF->Cell(0, 10, "", 0, 2, 'l');
@@ -61,6 +65,8 @@ if (isset($_POST['del-title'])) {
     $articlePDF->Cell(0, 10, "", 0, 2, 'l');
     $articlePDF->Cell(0, 10, "", 0, 2, 'l');
     $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+
+    // Paragraph B
 
     $paraPartsB = str_split($data['ARTICLE_PARA_B'], 75);
     foreach ($paraPartsB as $partB) {
@@ -69,23 +75,41 @@ if (isset($_POST['del-title'])) {
 
     $articlePDF->Cell(0, 10, "", 0, 2, 'l');
 
+    // Paragraph C
+
     $paraPartsC = str_split($data['ARTICLE_PARA_C'], 75);
     foreach ($paraPartsC as $partC) {
         $articlePDF->Cell(0, 5, $partC, 0, 2, 'l');
     }
 
     $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+
+    // Image B
 
     $tempImagePathB = '../../../images/pdf/temp_imageB.jpg';
     $imageData = base64_decode($data['ARTICLE_IMG_B']);
     if (file_put_contents($tempImagePathB, $imageData) !== false) {
-        $articlePDF->Image($tempImagePathB, 10, $imgAGap - ($imgAGap / 2), 190);
+        $articlePDF->Image($tempImagePathB, 10, count($paraPartsC) + 45, 190);
     } else {
         echo "Failed to create image file.";
     }
 
+    // Spacing
+
     $articlePDF->Cell(0, 10, "", 0, 2, 'l');
     $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+    $articlePDF->Cell(0, 10, "", 0, 2, 'l');
+
+    // Paragraph D
 
     $paraPartsD = str_split($data['ARTICLE_PARA_D'], 75);
     foreach ($paraPartsD as $partD) {
@@ -95,6 +119,8 @@ if (isset($_POST['del-title'])) {
     $articlePDF->Cell(0, 10, "", 0, 2, 'l');
 
     $articlePDF->SetFont('Arial', '', 10);
+
+    // Article Details
 
     $author_query = "SELECT * FROM users WHERE USER_ID = '" . $data['AUTHOR_ID'] . "'";
     $author_result = mysqli_query($connection, $author_query);

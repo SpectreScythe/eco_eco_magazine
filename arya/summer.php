@@ -25,7 +25,7 @@
         <nav>
             <h1 class="cultitle">Summer Collection</h1>
             <ul>
-                <a href="F:\CSS1\main\new.html" ><li><i class="fa fa-arrow-left" style="font-size:24px;color:white"></i></a>
+                <a href="./new.php" ><li><i class="fa fa-arrow-left" style="font-size:24px;color:white"></i></a>
             </ul>
         </nav>
     </header>
