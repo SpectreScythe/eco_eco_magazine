@@ -13,6 +13,7 @@ ECO ECO Magazine is designed to provide users with informative articles, categor
 ## Features
 
 - **Article Categories**: Browse articles by categories such as Entertainment, Fashion, Sports, and Games.
+- **Add Yout Own Articles**: Create your own custom articles with paragraphs and images as desired.
 - **User Authentication**: Secure user authentication and authorization system for managing subscriptions, comments, and contributions.
 - **PDF Download**: Users have the option to download their articles as PDF files, providing them with a convenient way to save and share their content.
 
